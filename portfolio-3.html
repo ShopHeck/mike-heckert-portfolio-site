@@ -161,6 +161,43 @@ h1 em{font-style:normal;color:var(--accent)}
 .kpi{font-family:var(--mono);font-weight:600;font-size:2rem;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .kpi-label{font-size:.78rem;color:var(--muted)}
 
+/* deal room */
+.deal-room{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.deal-room::before{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px);background-size:36px 36px;mask-image:linear-gradient(to bottom,black,transparent 90%);pointer-events:none}
+.deal-room .wrap{position:relative}
+.deal-room h2{color:#fff;max-width:820px}
+.deal-room .lede{color:#B9C0CF}
+.deal-room .kicker{color:#FF6B6B}
+.deal-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch}
+.deal-panel{background:#151B27;border:1px solid #303849;border-radius:var(--radius);padding:28px}
+.deal-panel h3{font-family:var(--display);font-weight:800;font-size:1.28rem;line-height:1.1;margin-bottom:10px;color:#fff}
+.deal-panel p{color:#B9C0CF;font-size:.92rem}
+.deal-score{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+.deal-score span{border:1px solid #303849;background:#0F141F;padding:14px 12px;font-family:var(--mono);font-size:.64rem;letter-spacing:.07em;text-transform:uppercase;color:#8D96A8}
+.deal-score b{display:block;font-size:1.32rem;color:#fff;letter-spacing:0;text-transform:none;margin-bottom:4px}
+.deal-list{display:grid;gap:10px;margin-top:18px}
+.deal-item{display:flex;gap:12px;align-items:flex-start;border-top:1px solid #303849;padding-top:12px}
+.deal-item:first-child{border-top:0;padding-top:0}
+.deal-item strong{font-family:var(--display);font-size:1rem;color:#fff;display:block}
+.deal-item span{font-size:.86rem;color:#B9C0CF}
+.deal-dot{width:9px;height:9px;background:var(--accent);border-radius:50%;margin-top:8px;flex-shrink:0}
+.brand-fit{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-top:18px}
+.fit-chip{background:#0F141F;border:1px solid #303849;color:#fff;font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;padding:10px 12px;border-radius:99px;text-align:center}
+.deal-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.flow-step{background:#F2F3F0;color:var(--ink);border-radius:var(--radius);padding:18px;min-height:150px}
+.flow-step .n{font-family:var(--mono);font-size:.66rem;color:var(--accent-ink);letter-spacing:.09em}
+.flow-step b{display:block;font-family:var(--display);font-size:1.08rem;line-height:1.1;margin:10px 0 8px}
+.flow-step span{font-size:.86rem;color:var(--muted)}
+.proof-strip{margin-top:18px;border:1px solid #303849;border-radius:var(--radius);display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}
+.proof-strip div{padding:16px;border-right:1px solid #303849}
+.proof-strip div:last-child{border-right:0}
+.proof-strip b{font-family:var(--mono);font-size:1rem;color:#fff;display:block}
+.proof-strip span{font-size:.72rem;color:#8D96A8;text-transform:uppercase;letter-spacing:.07em}
+.deal-cta{margin-top:26px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0F141F;border:1px solid #303849;padding:20px 22px;border-radius:var(--radius)}
+.deal-cta span{color:#B9C0CF;font-size:.92rem}
+.deal-cta a{font-family:var(--mono);font-size:.8rem;color:#fff;background:var(--accent);text-decoration:none;padding:12px 18px;border-radius:99px;white-space:nowrap}
+@media(max-width:860px){.deal-grid,.deal-flow,.proof-strip{grid-template-columns:1fr}.proof-strip div{border-right:0;border-bottom:1px solid #303849}.proof-strip div:last-child{border-bottom:0}.deal-score{grid-template-columns:1fr}}
+
 /* tools */
 .tools-grid{grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
 .tool-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
@@ -322,6 +359,7 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
       <li><a href="#fights">Fight Record</a></li>
       <li><a href="#brands">Brands</a></li>
       <li><a href="#socials">Socials</a></li>
+      <li><a href="#deal-room">Deal Room</a></li>
       <li><a href="#partner">Partner</a></li>
       <li><a href="#code">Code</a></li>
       <li><a href="#about">About</a></li>
@@ -503,9 +541,81 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
   </div>
 </section>
 
+<section id="deal-room" class="deal-room">
+  <div class="wrap">
+    <span class="kicker">04 — Brand Deal Room</span>
+    <h2>The sponsorship case, built for a brand manager</h2>
+    <p class="lede">A partnership with Mike is not just a logo on fight shorts. It is a fighter, founder, and content operator who can turn a fight cycle into measurable creative your team can reuse, report on, and defend internally.</p>
+
+    <div class="deal-grid">
+      <div class="deal-panel reveal">
+        <h3>Why this is a cleaner buy</h3>
+        <p>Most athlete sponsorships stop at visibility. This one packages fight-night exposure, creator-style content, and ecommerce fluency into one partner. Mike knows how products sell because he runs the storefronts himself.</p>
+        <div class="deal-score">
+          <span><b>27K+</b>Instagram audience</span>
+          <span><b>2-1</b>BKFC record</span>
+          <span><b>84+</b>store reviews</span>
+        </div>
+      </div>
+      <div class="deal-panel reveal">
+        <h3>Best-fit sponsor categories</h3>
+        <p>Strongest fit is performance, grit, recovery, discipline, and local pride. The brand should want raw credibility more than polished celebrity.</p>
+        <div class="brand-fit">
+          <span class="fit-chip">Supplements</span>
+          <span class="fit-chip">Energy drinks</span>
+          <span class="fit-chip">Recovery tech</span>
+          <span class="fit-chip">Fitness equipment</span>
+          <span class="fit-chip">Men's grooming</span>
+          <span class="fit-chip">Streetwear</span>
+          <span class="fit-chip">Meal prep</span>
+          <span class="fit-chip">Tampa Bay brands</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="deal-flow reveal">
+      <div class="flow-step"><span class="n">DELIVERABLE 01</span><b>Fight-week visibility</b><span>Logo placement, tagged fight-week content, weigh-in coverage, walkout/corner assets, and highlight reuse.</span></div>
+      <div class="flow-step"><span class="n">DELIVERABLE 02</span><b>Creator content</b><span>Dedicated reels, story sequences, product integration, training clips, promo codes, and brand mentions.</span></div>
+      <div class="flow-step"><span class="n">DELIVERABLE 03</span><b>Usage rights</b><span>Your team can repost, cut down, and use agreed content across owned channels, sales pages, and paid media add-ons.</span></div>
+      <div class="flow-step"><span class="n">DELIVERABLE 04</span><b>Performance recap</b><span>Every campaign ends with reach, engagement, clicks, code redemptions, and content links packaged for internal reporting.</span></div>
+    </div>
+
+    <div class="deal-grid" style="margin-top:18px">
+      <div class="deal-panel reveal">
+        <h3>Audience snapshot brands can act on</h3>
+        <div class="deal-list">
+          <div class="deal-item"><span class="deal-dot"></span><div><strong>Combat sports fans</strong><span>BKFC, boxing, MMA, training, striking, fight-week personalities, and knockout highlights.</span></div></div>
+          <div class="deal-item"><span class="deal-dot"></span><div><strong>Fitness buyers</strong><span>People who respond to practical training, gym gear, supplements, recovery, apparel, and discipline-based messaging.</span></div></div>
+          <div class="deal-item"><span class="deal-dot"></span><div><strong>Founder-led credibility</strong><span>Mike can speak to products as an operator, not just an endorser reading a script.</span></div></div>
+        </div>
+      </div>
+      <div class="deal-panel reveal">
+        <h3>Procurement-ready promises</h3>
+        <div class="deal-list">
+          <div class="deal-item"><span class="deal-dot"></span><div><strong>Compliance</strong><span>FTC disclosure, paid partnership labels, category exclusivity options, and pre-post content review.</span></div></div>
+          <div class="deal-item"><span class="deal-dot"></span><div><strong>Speed</strong><span>48-hour response target, campaign calendar before launch, and clear approval windows.</span></div></div>
+          <div class="deal-item"><span class="deal-dot"></span><div><strong>Measurement</strong><span>UTM links, promo codes, platform screenshots, and a post-campaign recap built for your team.</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof-strip reveal" aria-label="Sponsor proof points">
+      <div><b>Founder</b><span>Runs two stores</span></div>
+      <div><b>Fighter</b><span>BKFC middleweight</span></div>
+      <div><b>Creator</b><span>Content-native</span></div>
+      <div><b>Operator</b><span>Knows conversion</span></div>
+    </div>
+
+    <div class="deal-cta reveal">
+      <span>Want a brand-safe package? Ask for audience screenshots, deliverable menu, usage rights, and the fight-cycle calendar in the first reply.</span>
+      <a href="mailto:sales@kingkillers.co?subject=Brand%20Deal%20Room%20inquiry&body=Hi%20Mike%2C%0A%0AWe%20reviewed%20the%20Brand%20Deal%20Room%20and%20would%20like%20the%20media%20kit%2C%20audience%20screenshots%2C%20deliverable%20menu%2C%20and%20fight-cycle%20calendar.%0A%0ABrand%3A%0AWebsite%3A%0ACampaign%20goal%3A">Request the deal room</a>
+    </div>
+  </div>
+</section>
+
 <section id="partner" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
-    <span class="kicker">04 — Partner with me</span>
+    <span class="kicker">05 — Partner with me</span>
     <h2>Sponsorship, productized</h2>
     <p class="lede">No guesswork. Here's how a partnership runs, what each package includes, and the answers your marketing team will ask for — all before the first email.</p>
 
@@ -595,7 +705,7 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
 
 <section id="code">
   <div class="wrap">
-    <span class="kicker">05 — The Builder</span>
+    <span class="kicker">06 — The Builder</span>
     <h2>Vibecoded &amp; shipped</h2>
     <p class="lede">Self-taught, AI-assisted, and shipping. 40 public repositories on GitHub plus two production storefronts that pay real bills.</p>
     <div class="grid tools-grid">
@@ -625,7 +735,7 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
 
 <section id="projects" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
-    <span class="kicker">06 — Projects</span>
+    <span class="kicker">07 — Projects</span>
     <h2>Shipped &amp; shipping</h2>
     <p class="lede">The bigger picture — what's done, what's in motion, and what each one proves.</p>
 
@@ -669,7 +779,7 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
 
 <section id="about">
   <div class="wrap">
-    <span class="kicker">07 — About</span>
+    <span class="kicker">08 — About</span>
     <h2>Who I am</h2>
     <div class="about-grid" style="margin-top:34px">
       <div>
@@ -693,7 +803,7 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
 <section id="contact" style="padding-bottom:0">
   <div class="wrap">
     <div class="contact reveal">
-      <span class="kicker" style="color:var(--accent)">08 — Let’s talk</span>
+      <span class="kicker" style="color:var(--accent)">09 — Let’s talk</span>
       <h2>Sponsor me, partner with me, or hire me</h2>
       <p>Fight sponsorships, brand partnerships, ecommerce collaborations, or roles where a relentless builder is an asset. I'll send the media kit and sponsor deck with my first reply.</p>
       <div class="intents" role="group" aria-label="What do you want to talk about?">
@@ -806,7 +916,7 @@ if(finePointer&&!reduced){
 /* ---------- scroll progress + round tracker ---------- */
 const progress=document.getElementById('progress');
 const badge=document.getElementById('roundBadge');
-const rounds={fights:['RD 01','THE FIGHTER'],brands:['RD 02','THE BRANDS'],socials:['RD 03','THE AUDIENCE'],partner:['RD 04','PARTNER WITH ME'],code:['RD 05','THE BUILDER'],projects:['RD 06','PROJECTS'],about:['RD 07','ABOUT'],contact:['RD 08','LET\'S TALK']};
+const rounds={fights:['RD 01','THE FIGHTER'],brands:['RD 02','THE BRANDS'],socials:['RD 03','THE AUDIENCE'],'deal-room':['RD 04','BRAND DEAL ROOM'],partner:['RD 05','PARTNER WITH ME'],code:['RD 06','THE BUILDER'],projects:['RD 07','PROJECTS'],about:['RD 08','ABOUT'],contact:['RD 09','LET\'S TALK']};
 const sections=Object.keys(rounds).map(id=>document.getElementById(id)).filter(Boolean);
 let ticking=false;
 window.addEventListener('scroll',()=>{
