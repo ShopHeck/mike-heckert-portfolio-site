@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "build": "rm -rf dist && mkdir -p dist/server/public dist/.openai && cp worker/index.js dist/server/index.js && cp index.html Heckert-Fight-Sponsorship-Deck.pdf Heckert-Fight-Sponsorship-Deck.pptx dist/server/public/ && cp -R assets dist/server/public/assets && cp .openai/hosting.json dist/.openai/hosting.json"
+  },
+  "devDependencies": {}
+}
