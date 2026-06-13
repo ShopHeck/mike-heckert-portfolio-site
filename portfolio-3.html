@@ -264,8 +264,48 @@ h1 em{font-style:normal;color:var(--accent)}
 .proof-stack{display:grid;gap:18px}
 .suite-strip{margin-top:18px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .suite-strip span{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px;font-family:var(--mono);font-size:.68rem;color:var(--muted);text-align:center;text-transform:uppercase;letter-spacing:.06em}
-@media(max-width:920px){.suite-grid,.proof-library{grid-template-columns:1fr}.planner-output,.suite-strip{grid-template-columns:repeat(2,1fr)}}
+.sponsor-hq{margin-top:42px;border-top:1.5px solid var(--ink);padding-top:32px}
+.hq-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.hq-panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.hq-panel.dark{background:var(--ink);border-color:#303849;color:#fff}
+.hq-panel h3{font-family:var(--display);font-size:1.28rem;line-height:1.1;margin-bottom:10px}
+.hq-panel p{font-size:.92rem;color:var(--muted)}
+.hq-panel.dark p{color:#B9C0CF}
+.hq-list{list-style:none;display:grid;gap:10px;margin-top:16px}
+.hq-list li{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:.9rem}
+.hq-panel.dark .hq-list li{color:#D6DBE4}
+.hq-list li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);margin-top:8px;flex-shrink:0}
+.hq-mail{display:inline-flex;margin-top:18px;background:var(--accent);color:#fff;text-decoration:none;border-radius:99px;padding:12px 18px;font-family:var(--mono);font-size:.78rem}
+.recap-board{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}
+.recap-board div{background:#fff;border:1px solid var(--line);border-radius:6px;padding:14px}
+.hq-panel.dark .recap-board div{background:#0F141F;border-color:#303849}
+.recap-board b{display:block;font-family:var(--display);font-size:1.18rem;color:var(--ink)}
+.hq-panel.dark .recap-board b{color:#fff}
+.recap-board span{font-family:var(--mono);font-size:.62rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.hq-panel.dark .recap-board span{color:#8D96A8}
+.ladder-grid{margin-top:18px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.ladder-card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px;min-height:170px}
+.ladder-card b{display:block;font-family:var(--display);font-size:1rem;line-height:1.05;margin-bottom:8px}
+.ladder-card span{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;color:var(--accent-ink);text-transform:uppercase}
+.ladder-card p{font-size:.83rem;color:var(--muted);margin-top:10px}
+.category-board{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:10px}
+.category-chip{background:#fff;border:1px solid var(--line);border-radius:6px;padding:12px}
+.category-chip b{display:block;font-family:var(--display);font-size:.96rem}
+.category-chip span{font-family:var(--mono);font-size:.62rem;color:var(--shipped);letter-spacing:.07em;text-transform:uppercase}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.menu-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:15px}
+.menu-card b{font-family:var(--display);font-size:1rem;display:block;margin-bottom:5px}
+.menu-card span{font-size:.82rem;color:var(--muted)}
+.safety-strip{margin-top:18px;background:var(--ink);color:#fff;border-radius:var(--radius);padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.safety-strip h3{font-family:var(--display);font-size:1.22rem;margin-bottom:8px}
+.safety-strip p{color:#B9C0CF;font-size:.9rem}
+.safety-list{list-style:none;display:grid;gap:8px}
+.safety-list li{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;color:#D6DBE4}
+.logo-slots{margin-top:18px;display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.logo-slot{min-height:76px;border:1px dashed var(--line);border-radius:6px;background:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;font-family:var(--mono);font-size:.62rem;color:var(--muted);letter-spacing:.07em;text-transform:uppercase}
+@media(max-width:920px){.suite-grid,.proof-library,.hq-grid,.safety-strip{grid-template-columns:1fr}.planner-output,.suite-strip,.recap-board{grid-template-columns:repeat(2,1fr)}.ladder-grid,.menu-grid,.logo-slots{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.control-line,.boosts,.appearance-options,.booking-fields,.planner-output,.suite-strip{grid-template-columns:1fr}.proof-feature{min-height:260px}}
+@media(max-width:560px){.recap-board,.ladder-grid,.menu-grid,.logo-slots{grid-template-columns:1fr}}
 
 /* tools */
 .tools-grid{grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
@@ -791,6 +831,109 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
       <span>Approved photo set</span>
       <span>Usage rights options</span>
       <span>Post-campaign recap</span>
+    </div>
+
+    <div class="sponsor-hq" id="sponsor-hq">
+      <span class="kicker">Private Sponsor HQ</span>
+      <h2>Built so a brand manager can say yes</h2>
+      <p class="lede">The public page creates interest. The private sponsor room gives serious buyers the clean internal package they need to approve spend, defend the deal, and renew after the fight.</p>
+
+      <div class="hq-grid">
+        <div class="hq-panel dark reveal">
+          <h3>Private deal room contents</h3>
+          <p>For qualified brands, the next step is a tighter packet with everything procurement, legal, and marketing need in one place.</p>
+          <ul class="hq-list">
+            <li>Current audience screenshots and platform links</li>
+            <li>Fight-cycle calendar: announcement, camp, fight week, fight night, recap</li>
+            <li>Placement inventory for kit, walkout, social, appearances, and content</li>
+            <li>Usage rights menu for organic reposting, paid media, and whitelisting add-ons</li>
+            <li>Clean sponsor agreement notes: deliverables, approvals, exclusivity, timing</li>
+          </ul>
+          <a class="hq-mail" href="mailto:sales@kingkillers.co?subject=Private%20Sponsor%20HQ%20request&body=Hi%20Mike%2C%0A%0AWe%20would%20like%20access%20to%20the%20private%20sponsor%20HQ%20for%20your%20next%20fight%20cycle.%0A%0ABrand%3A%0AWebsite%3A%0ACategory%3A%0ACampaign%20goal%3A">Request private HQ</a>
+        </div>
+
+        <div class="hq-panel reveal">
+          <h3>Post-campaign recap sample</h3>
+          <p>This is the report format brands receive after a campaign. Final numbers are filled in from platform screenshots, links, promo codes, and agreed tracking.</p>
+          <div class="recap-board" aria-label="Sample recap metrics">
+            <div><b>Reach</b><span>platform screenshots</span></div>
+            <div><b>Views</b><span>short-form + stories</span></div>
+            <div><b>Clicks</b><span>UTM / link-in-bio</span></div>
+            <div><b>Code</b><span>redemptions if used</span></div>
+            <div><b>Assets</b><span>photos, reels, clips</span></div>
+            <div><b>Next</b><span>renewal recommendation</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hq-panel reveal" style="margin-top:18px">
+        <h3>Long-term partnership ladder</h3>
+        <p>Every sponsor can start small, then step into a larger campaign without rebuilding the relationship from zero.</p>
+        <div class="ladder-grid">
+          <div class="ladder-card"><span>Entry</span><b>Fight Night Sponsor</b><p>One event window: logo placement, tagged content, and post-fight recap.</p></div>
+          <div class="ladder-card"><span>Recommended</span><b>Fight Cycle Partner</b><p>Six to eight weeks across announcement, camp, fight week, and fight night.</p></div>
+          <div class="ladder-card"><span>Preferred</span><b>Season Partner</b><p>Two to three fight cycles plus monthly content, appearances, and category priority.</p></div>
+          <div class="ladder-card"><span>Premium</span><b>Founding Partner</b><p>Year-round category lane, first look at inventory, and deeper content usage rights.</p></div>
+        </div>
+      </div>
+
+      <div class="hq-grid" style="margin-top:18px">
+        <div class="hq-panel reveal">
+          <h3>Open sponsor categories</h3>
+          <p>Category availability keeps outreach focused and gives larger brands a reason to move before a competitor claims the lane.</p>
+          <div class="category-board" aria-label="Open sponsor categories">
+            <div class="category-chip"><b>Energy</b><span>open</span></div>
+            <div class="category-chip"><b>Supplements</b><span>open</span></div>
+            <div class="category-chip"><b>Recovery</b><span>open</span></div>
+            <div class="category-chip"><b>Meal prep</b><span>open</span></div>
+            <div class="category-chip"><b>Men's grooming</b><span>open</span></div>
+            <div class="category-chip"><b>Fitness gear</b><span>open</span></div>
+            <div class="category-chip"><b>Local business</b><span>open</span></div>
+            <div class="category-chip"><b>Apparel</b><span>selective</span></div>
+          </div>
+        </div>
+
+        <div class="hq-panel reveal">
+          <h3>Content deliverable menu</h3>
+          <p>Brands can choose the mix that matches their campaign: awareness, product launch, conversion, retail traffic, or local event turnout.</p>
+          <div class="menu-grid">
+            <div class="menu-card"><b>Dedicated reel</b><span>Product integration, training, or fight-week story.</span></div>
+            <div class="menu-card"><b>Story set</b><span>Three to five frames with links, tags, and calls to action.</span></div>
+            <div class="menu-card"><b>Winner asset</b><span>Post-fight photo, caption, and sponsor thank-you.</span></div>
+            <div class="menu-card"><b>Gym content</b><span>Training clips, product use, technique, and routine.</span></div>
+            <div class="menu-card"><b>Appearance day</b><span>Retail visit, expo booth, seminar, or launch event.</span></div>
+            <div class="menu-card"><b>Usage rights</b><span>Organic reposting included; paid usage available as an add-on.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="safety-strip reveal">
+        <div>
+          <h3>Brand-safe operating standards</h3>
+          <p>The goal is to make Mike easy to approve: clear disclosures, professional approval windows, no surprise category conflicts, and a recap that helps the sponsor renew.</p>
+        </div>
+        <ul class="safety-list">
+          <li>FTC disclosure on sponsored posts</li>
+          <li>Pre-post review windows available</li>
+          <li>Category exclusivity options</li>
+          <li>Claims limited to substantiated product use</li>
+          <li>48-hour response target</li>
+          <li>Campaign recap after delivery</li>
+        </ul>
+      </div>
+
+      <div class="hq-panel reveal" style="margin-top:18px">
+        <h3>Sponsor proof wall</h3>
+        <p>When sponsor logos are uploaded, this becomes a visual credibility wall for past and current partners. Until then, the slots show the inventory sponsors can claim.</p>
+        <div class="logo-slots" aria-label="Sponsor logo slots">
+          <div class="logo-slot">Fight kit</div>
+          <div class="logo-slot">Walkout shirt</div>
+          <div class="logo-slot">Corner / banner</div>
+          <div class="logo-slot">Social content</div>
+          <div class="logo-slot">Appearance</div>
+          <div class="logo-slot">Usage rights</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
