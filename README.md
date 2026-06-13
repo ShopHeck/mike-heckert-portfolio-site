@@ -5,7 +5,7 @@ Personal portfolio and sponsorship website for professional BKFC fighter Mike "K
 ## Files
 
 - `index.html` is the public static site entrypoint.
-- `assets/` contains the sponsor deck cover image, latest BKFC Clearwater fight photos, and the `social-share-king-killer.jpg` preview image used by social platforms.
+- `assets/` contains the sponsor deck cover image, latest BKFC Clearwater fight photos, sponsor/brand media, and the `social-share-king-killer.jpg` preview image used by social platforms.
 - `Heckert-Fight-Sponsorship-Deck.pdf` and `Heckert-Fight-Sponsorship-Deck.pptx` are linked/downloadable sponsor deck assets.
 - `worker/index.js`, `package.json`, and `.openai/hosting.json` support the current Sites deployment package.
 

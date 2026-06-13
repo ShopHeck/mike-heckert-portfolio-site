@@ -107,7 +107,7 @@ h1 em{font-style:normal;color:var(--accent)}
 .hero-card{position:relative;isolation:isolate}
 .hero-card::before{content:"";position:absolute;inset:38px -12px -14px 26px;background:var(--accent);z-index:-2;clip-path:polygon(8% 0,100% 7%,92% 100%,0 92%)}
 .hero-card::after{content:"BKFC";position:absolute;right:-18px;top:14px;font-family:var(--display);font-size:clamp(3rem,8vw,6.6rem);font-weight:800;letter-spacing:.08em;color:rgba(15,20,31,.08);writing-mode:vertical-rl;line-height:1;z-index:-1}
-.deck-cover{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border:1px solid rgba(15,20,31,.18);box-shadow:0 26px 70px rgba(15,20,31,.22);background:var(--corner);display:block}
+.deck-cover{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 18%;border:1px solid rgba(15,20,31,.18);box-shadow:0 26px 70px rgba(15,20,31,.22);background:var(--corner);display:block}
 .hero-media-bar{position:absolute;left:20px;right:20px;bottom:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .media-pill{background:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.45);padding:10px 8px;text-align:center;font-family:var(--mono);font-size:.62rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);backdrop-filter:blur(8px)}
 .media-pill b{display:block;font-size:1.05rem;color:var(--ink);letter-spacing:0}
@@ -172,6 +172,8 @@ h1 em{font-style:normal;color:var(--accent)}
 .brand-tag{font-family:var(--mono);font-size:.7rem;color:var(--accent-ink);text-transform:uppercase;letter-spacing:.1em;display:block;margin:4px 0 14px}
 .brand-link{font-family:var(--mono);font-size:.78rem;color:var(--accent-ink);text-decoration:none;display:inline-block;margin-top:16px}
 .brand-link:hover{text-decoration:underline}
+.brand-photo{margin:-26px -26px 20px;height:220px;border-radius:var(--radius) var(--radius) 0 0;overflow:hidden;background:var(--ink)}
+.brand-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block}
 .proof{display:flex;gap:22px;border-top:1px dashed var(--line);padding-top:14px;margin-top:18px;flex-wrap:wrap}
 .mini{font-family:var(--mono)}
 .mini b{display:block;font-size:.95rem;font-weight:600}
@@ -447,8 +449,8 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
         <a class="btn btn-ghost" href="Heckert-Fight-Sponsorship-Deck.pdf" download>Download deck</a>
       </div>
     </div>
-    <figure class="hero-card stagger s3" aria-label="Mike Heckert winning by first-round knockout at BKFC Clearwater">
-      <img class="deck-cover" src="assets/fight-clearwater-victory.jpg" alt="Mike Heckert celebrates after a first-round knockout win at BKFC Clearwater">
+    <figure class="hero-card stagger s3" aria-label="Mike Heckert in King Killer fight-night promotional portrait">
+      <img class="deck-cover" src="assets/media-king-killer-arena.jpg" alt="Mike Heckert in a King Killer fight-night promotional portrait">
       <a class="deck-link" href="Heckert-Fight-Sponsorship-Deck.pdf" download>PDF deck</a>
       <figcaption class="hero-media-bar">
         <span class="media-pill"><b>2-1</b>BKFC record</span>
@@ -564,6 +566,9 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
     <p class="lede">Two ecommerce brands I built and run end to end on Shopify — product, design, marketing, fulfillment, and the storefronts themselves.</p>
     <div class="grid brands-grid">
       <div class="card reveal" style="background:var(--paper)">
+        <figure class="brand-photo">
+          <img src="assets/media-king-killers-portrait.jpg" alt="Mike Heckert wearing King Killers apparel in a studio portrait">
+        </figure>
         <div class="brand-name">King Killers</div>
         <span class="brand-tag">Combat sports apparel · Fighter owned &amp; operated</span>
         <p>Premium activewear, gym clothes, and fightwear — from MMA rashguards and fight tees to supplements and boxing-glove jewelry. Built for people who train, by someone who actually fights.</p>
@@ -766,17 +771,17 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
 
     <div class="proof-library reveal">
       <figure class="proof-feature" aria-label="Campaign proof library feature image">
-        <img src="assets/fight-clearwater-victory.jpg" alt="Mike Heckert celebrates a first-round knockout win at BKFC Clearwater">
-        <figcaption class="proof-caption"><b>Winning moment assets</b><span>fight-night proof · brand-safe highlight use</span></figcaption>
+        <img src="assets/media-sponsor-shirt.jpg" alt="Mike Heckert showing sponsor logos on a King Killers shirt">
+        <figcaption class="proof-caption"><b>Sponsor placement proof</b><span>logo visibility · merch and fight-week assets</span></figcaption>
       </figure>
       <div class="proof-stack">
         <figure class="proof-card">
-          <img src="assets/fight-clearwater-punch.jpg" alt="Mike Heckert lands a clean punch during BKFC Clearwater">
-          <figcaption class="proof-caption"><b>Action creative</b><span>high-impact social and ad visuals</span></figcaption>
+          <img src="assets/media-cfn-walkout.jpg" alt="Mike Heckert during a Crypto Fight Night walkout with sponsor branding visible">
+          <figcaption class="proof-caption"><b>Walkout visibility</b><span>event-stage brand moments</span></figcaption>
         </figure>
         <figure class="proof-card">
-          <img src="assets/fight-clearwater-walkout.jpg" alt="Mike Heckert prepares during fight week">
-          <figcaption class="proof-caption"><b>Camp and walkout energy</b><span>behind-the-scenes brand storytelling</span></figcaption>
+          <img src="assets/media-fight-night-key-art.jpg" alt="Mike Heckert fight-night promotional key art">
+          <figcaption class="proof-caption"><b>Fight-night key art</b><span>premium promotional creative</span></figcaption>
         </figure>
       </div>
     </div>
