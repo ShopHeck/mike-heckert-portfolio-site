@@ -224,6 +224,47 @@ h1 em{font-style:normal;color:var(--accent)}
 .deal-cta a{font-family:var(--mono);font-size:.8rem;color:#fff;background:var(--accent);text-decoration:none;padding:12px 18px;border-radius:99px;white-space:nowrap}
 @media(max-width:860px){.deal-grid,.deal-flow,.proof-strip{grid-template-columns:1fr}.proof-strip div{border-right:0;border-bottom:1px solid #303849}.proof-strip div:last-child{border-bottom:0}.deal-score{grid-template-columns:1fr}}
 
+/* sponsor tools */
+.sponsor-suite{background:var(--card);border-bottom:1px solid var(--line)}
+.suite-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:stretch}
+.suite-panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.suite-panel h3{font-family:var(--display);font-weight:800;font-size:1.26rem;line-height:1.1;margin-bottom:8px}
+.suite-panel p{font-size:.92rem;color:var(--muted)}
+.planner-controls{display:grid;gap:14px;margin-top:20px}
+.control-line{display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center}
+.control-line label{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent-ink)}
+.control-line select,.control-line input{width:100%;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink);padding:11px 12px;font-family:var(--body);font-size:.92rem}
+.boosts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.boosts label{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:6px;padding:10px;font-size:.82rem;color:var(--muted)}
+.boosts input{accent-color:var(--accent);width:auto}
+.planner-output{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.planner-output div{background:#fff;border:1px solid var(--line);border-radius:6px;padding:14px}
+.planner-output b{font-family:var(--display);font-size:1.25rem;display:block}
+.planner-output span{font-family:var(--mono);font-size:.62rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.planner-note{font-family:var(--mono);font-size:.68rem;color:var(--muted);margin-top:12px}
+.appearance-options{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:20px 0}
+.appearance-option{border:1px solid var(--line);background:#fff;border-radius:6px;padding:14px;text-align:left;cursor:pointer;color:var(--ink);transition:border-color .15s,transform .15s,background .15s}
+.appearance-option:hover{transform:translateY(-2px);border-color:var(--accent)}
+.appearance-option.active{background:var(--ink);border-color:var(--ink);color:#fff}
+.appearance-option b{display:block;font-family:var(--display);font-size:1rem;margin-bottom:3px}
+.appearance-option span{font-size:.78rem;color:inherit;opacity:.72}
+.booking-fields{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.booking-fields input{border:1px solid var(--line);border-radius:6px;background:#fff;padding:11px 12px;font-family:var(--body)}
+.suite-mail{display:inline-flex;margin-top:16px;background:var(--accent);color:#fff;text-decoration:none;border-radius:99px;padding:12px 18px;font-family:var(--mono);font-size:.78rem}
+.proof-library{margin-top:18px;display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
+.proof-feature,.proof-card{position:relative;overflow:hidden;border-radius:var(--radius);min-height:320px;background:var(--ink);border:1px solid var(--line)}
+.proof-card{min-height:150px}
+.proof-feature img,.proof-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.proof-feature::after,.proof-card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,20,31,.88),rgba(15,20,31,.18) 58%,rgba(15,20,31,.05))}
+.proof-caption{position:absolute;left:18px;right:18px;bottom:18px;z-index:1;color:#fff}
+.proof-caption b{display:block;font-family:var(--display);font-weight:800;font-size:1.12rem;line-height:1.1}
+.proof-caption span{font-family:var(--mono);font-size:.64rem;text-transform:uppercase;letter-spacing:.1em;color:#D6DBE4}
+.proof-stack{display:grid;gap:18px}
+.suite-strip{margin-top:18px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.suite-strip span{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px;font-family:var(--mono);font-size:.68rem;color:var(--muted);text-align:center;text-transform:uppercase;letter-spacing:.06em}
+@media(max-width:920px){.suite-grid,.proof-library{grid-template-columns:1fr}.planner-output,.suite-strip{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.control-line,.boosts,.appearance-options,.booking-fields,.planner-output,.suite-strip{grid-template-columns:1fr}.proof-feature{min-height:260px}}
+
 /* tools */
 .tools-grid{grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
 .tool-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
@@ -386,6 +427,7 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
       <li><a href="#brands">Brands</a></li>
       <li><a href="#socials">Socials</a></li>
       <li><a href="#deal-room">Deal Room</a></li>
+      <li><a href="#sponsor-suite">Sponsor Tools</a></li>
       <li><a href="#partner">Partner</a></li>
       <li><a href="#code">Code</a></li>
       <li><a href="#about">About</a></li>
@@ -466,7 +508,7 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
     <div class="bout reveal">
       <span class="result result-l">L</span>
       <div>
-        <h3>Official BKFC record includes one loss</h3>
+        <h3>Official BKFC record, clearly presented</h3>
         <p>Full bout history, opponent detail, and current media kit are available in the sponsor deck and on request.</p>
       </div>
     </div>
@@ -661,9 +703,96 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
   </div>
 </section>
 
+<section id="sponsor-suite" class="sponsor-suite">
+  <div class="wrap">
+    <span class="kicker">05 — Sponsor Tools</span>
+    <h2>Three tools that make the deal easier to approve</h2>
+    <p class="lede">Sponsors need confidence before they spend. This section turns Mike's fight-cycle attention, creator content, and appearance availability into a clear path for brand teams.</p>
+
+    <div class="suite-grid">
+      <div class="suite-panel reveal">
+        <h3>Sponsor value planner</h3>
+        <p>Choose a package and the assets your team needs. The planner shows what the campaign can produce without pretending to forecast revenue.</p>
+        <div class="planner-controls" aria-label="Sponsor value planner">
+          <div class="control-line">
+            <label for="packageSelect">Package</label>
+            <select id="packageSelect">
+              <option value="content">Content Partner</option>
+              <option value="kit">Fight Kit Partner</option>
+              <option value="title">Title Partner</option>
+            </select>
+          </div>
+          <div class="control-line">
+            <label for="campaignWindow">Window</label>
+            <select id="campaignWindow">
+              <option value="fight-week">Fight week</option>
+              <option value="fight-cycle">Full fight cycle</option>
+              <option value="quarter">Quarterly partnership</option>
+            </select>
+          </div>
+          <div class="boosts" aria-label="Optional campaign assets">
+            <label><input type="checkbox" class="plannerBoost" value="usage" checked> Usage rights</label>
+            <label><input type="checkbox" class="plannerBoost" value="appearance"> Appearance</label>
+            <label><input type="checkbox" class="plannerBoost" value="promo"> Promo code</label>
+            <label><input type="checkbox" class="plannerBoost" value="recap" checked> Recap report</label>
+          </div>
+        </div>
+        <div class="planner-output" aria-live="polite">
+          <div><b id="deliverableCount">4</b><span>brand assets</span></div>
+          <div><b id="campaignDepth">Lean</b><span>campaign depth</span></div>
+          <div><b id="recapLevel">Tracked</b><span>measurement</span></div>
+        </div>
+        <p class="planner-note" id="plannerSummary">Content Partner: sponsored posts, stories, product integration, usage rights, and a campaign recap.</p>
+      </div>
+
+      <div class="suite-panel reveal">
+        <h3>Book Mike for paid appearances</h3>
+        <p>Make the request feel premium from the first click. Choose the appearance type, add the basics, and open a ready-to-send booking email.</p>
+        <div class="appearance-options" role="group" aria-label="Appearance type">
+          <button class="appearance-option active" type="button" data-appearance="Fitness Expo"><b>Fitness expo</b><span>Booth traffic, meet-and-greet, product demos</span></button>
+          <button class="appearance-option" type="button" data-appearance="Brand Event"><b>Brand event</b><span>Launches, retail visits, partner activations</span></button>
+          <button class="appearance-option" type="button" data-appearance="Gym Seminar"><b>Gym seminar</b><span>Striking, discipline, camp mindset</span></button>
+          <button class="appearance-option" type="button" data-appearance="Content Shoot"><b>Content shoot</b><span>Photo, video, ads, and social creative</span></button>
+        </div>
+        <div class="booking-fields">
+          <input id="bookingBrand" type="text" placeholder="Brand or organization" aria-label="Brand or organization">
+          <input id="bookingDate" type="text" placeholder="Target date" aria-label="Target date">
+          <input id="bookingCity" type="text" placeholder="City / venue" aria-label="City or venue">
+          <input id="bookingGoal" type="text" placeholder="Goal for the appearance" aria-label="Goal for the appearance">
+        </div>
+        <a class="suite-mail" id="bookingEmail" href="mailto:sales@kingkillers.co?subject=Paid%20appearance%20booking">Open booking email</a>
+      </div>
+    </div>
+
+    <div class="proof-library reveal">
+      <figure class="proof-feature" aria-label="Campaign proof library feature image">
+        <img src="assets/fight-clearwater-victory.jpg" alt="Mike Heckert celebrates a first-round knockout win at BKFC Clearwater">
+        <figcaption class="proof-caption"><b>Winning moment assets</b><span>fight-night proof · brand-safe highlight use</span></figcaption>
+      </figure>
+      <div class="proof-stack">
+        <figure class="proof-card">
+          <img src="assets/fight-clearwater-punch.jpg" alt="Mike Heckert lands a clean punch during BKFC Clearwater">
+          <figcaption class="proof-caption"><b>Action creative</b><span>high-impact social and ad visuals</span></figcaption>
+        </figure>
+        <figure class="proof-card">
+          <img src="assets/fight-clearwater-walkout.jpg" alt="Mike Heckert prepares during fight week">
+          <figcaption class="proof-caption"><b>Camp and walkout energy</b><span>behind-the-scenes brand storytelling</span></figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="suite-strip reveal" aria-label="Sponsor-ready assets">
+      <span>Media kit on request</span>
+      <span>Approved photo set</span>
+      <span>Usage rights options</span>
+      <span>Post-campaign recap</span>
+    </div>
+  </div>
+</section>
+
 <section id="partner" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
-    <span class="kicker">05 — Partner with me</span>
+    <span class="kicker">06 — Partner with me</span>
     <h2>Sponsorship, productized</h2>
     <p class="lede">No guesswork. Here's how a partnership runs, what each package includes, and the answers your marketing team will ask for — all before the first email.</p>
 
@@ -753,7 +882,7 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
 
 <section id="code">
   <div class="wrap">
-    <span class="kicker">06 — The Builder</span>
+    <span class="kicker">07 — The Builder</span>
     <h2>Vibecoded &amp; shipped</h2>
     <p class="lede">Self-taught, AI-assisted, and shipping. 40 public repositories on GitHub plus two production storefronts that pay real bills.</p>
     <div class="grid tools-grid">
@@ -783,7 +912,7 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
 
 <section id="projects" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
-    <span class="kicker">07 — Projects</span>
+    <span class="kicker">08 — Projects</span>
     <h2>Shipped &amp; shipping</h2>
     <p class="lede">The bigger picture — what's done, what's in motion, and what each one proves.</p>
 
@@ -827,7 +956,7 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
 
 <section id="about">
   <div class="wrap">
-    <span class="kicker">08 — About</span>
+    <span class="kicker">09 — About</span>
     <h2>Who I am</h2>
     <div class="about-grid" style="margin-top:34px">
       <div>
@@ -851,7 +980,7 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
 <section id="contact" style="padding-bottom:0">
   <div class="wrap">
     <div class="contact reveal">
-      <span class="kicker" style="color:var(--accent)">09 — Let’s talk</span>
+      <span class="kicker" style="color:var(--accent)">10 — Let’s talk</span>
       <h2>Sponsor me, partner with me, or hire me</h2>
       <p>Fight sponsorships, brand partnerships, ecommerce collaborations, or roles where a relentless builder is an asset. I'll send the media kit and sponsor deck with my first reply.</p>
       <div class="intents" role="group" aria-label="What do you want to talk about?">
@@ -964,7 +1093,7 @@ if(finePointer&&!reduced){
 /* ---------- scroll progress + round tracker ---------- */
 const progress=document.getElementById('progress');
 const badge=document.getElementById('roundBadge');
-const rounds={fights:['RD 01','THE FIGHTER'],brands:['RD 02','THE BRANDS'],socials:['RD 03','THE AUDIENCE'],'deal-room':['RD 04','BRAND DEAL ROOM'],partner:['RD 05','PARTNER WITH ME'],code:['RD 06','THE BUILDER'],projects:['RD 07','PROJECTS'],about:['RD 08','ABOUT'],contact:['RD 09','LET\'S TALK']};
+const rounds={fights:['RD 01','THE FIGHTER'],brands:['RD 02','THE BRANDS'],socials:['RD 03','THE AUDIENCE'],'deal-room':['RD 04','BRAND DEAL ROOM'],'sponsor-suite':['RD 05','SPONSOR TOOLS'],partner:['RD 06','PARTNER WITH ME'],code:['RD 07','THE BUILDER'],projects:['RD 08','PROJECTS'],about:['RD 09','ABOUT'],contact:['RD 10','LET\'S TALK']};
 const sections=Object.keys(rounds).map(id=>document.getElementById(id)).filter(Boolean);
 let ticking=false;
 window.addEventListener('scroll',()=>{
@@ -1038,7 +1167,7 @@ function verdict(ms){
   if(ms<200)return "Fighter reflexes. Mike's looking over his shoulder.";
   if(ms<280)return 'Sharp. Sparring-partner material.';
   if(ms<380)return 'Solid civilian hands.';
-  return 'Stick to sponsoring, champ.';
+  return 'Keep sharpening the timing.';
 }
 function setArena(cls,m,s){arena.className='arena'+(cls?' '+cls:'');main.textContent=m;sub.textContent=s;}
 arena.addEventListener('click',()=>{
@@ -1059,6 +1188,55 @@ arena.addEventListener('click',()=>{
     if(ms<200)koFlash();
   }
 });
+
+/* ---------- sponsor value planner + appearance funnel ---------- */
+const packageSelect=document.getElementById('packageSelect');
+const campaignWindow=document.getElementById('campaignWindow');
+const deliverableCount=document.getElementById('deliverableCount');
+const campaignDepth=document.getElementById('campaignDepth');
+const recapLevel=document.getElementById('recapLevel');
+const plannerSummary=document.getElementById('plannerSummary');
+const basePackages={
+  content:{name:'Content Partner',assets:4,depth:'Lean',summary:'sponsored posts, stories, product integration, and short-form creative.'},
+  kit:{name:'Fight Kit Partner',assets:6,depth:'Visible',summary:'fight-kit placement, fight-week social content, highlight-friendly assets, and usage rights.'},
+  title:{name:'Title Partner',assets:9,depth:'Full Cycle',summary:'lead placement, presented-by content, appearance options, and a complete fight-cycle recap.'}
+};
+const windowBoosts={'fight-week':0,'fight-cycle':2,quarter:4};
+function updatePlanner(){
+  if(!packageSelect)return;
+  const pkg=basePackages[packageSelect.value];
+  const boosts=[...document.querySelectorAll('.plannerBoost:checked')].map(i=>i.value);
+  const total=pkg.assets+windowBoosts[campaignWindow.value]+boosts.length;
+  deliverableCount.textContent=total;
+  campaignDepth.textContent=total>=13?'Premium':total>=9?pkg.depth:'Lean';
+  recapLevel.textContent=boosts.includes('promo')&&boosts.includes('recap')?'Code + UTM':boosts.includes('recap')?'Tracked':'Basic';
+  const extras=[];
+  if(boosts.includes('usage'))extras.push('usage rights');
+  if(boosts.includes('appearance'))extras.push('an appearance option');
+  if(boosts.includes('promo'))extras.push('promo-code tracking');
+  if(boosts.includes('recap'))extras.push('a recap report');
+  plannerSummary.textContent=pkg.name+': '+pkg.summary+(extras.length?' Includes '+extras.join(', ')+'.':'');
+}
+[packageSelect,campaignWindow,...document.querySelectorAll('.plannerBoost')].filter(Boolean).forEach(el=>el.addEventListener('change',updatePlanner));
+updatePlanner();
+
+let selectedAppearance='Fitness Expo';
+const bookingEmail=document.getElementById('bookingEmail');
+const bookingInputs=['bookingBrand','bookingDate','bookingCity','bookingGoal'].map(id=>document.getElementById(id));
+function updateBookingEmail(){
+  if(!bookingEmail)return;
+  const [brand,date,city,goal]=bookingInputs.map(i=>i?.value.trim()||'');
+  const body='Hi Mike,\n\nWe would like to book you for a paid appearance.\n\nAppearance type: '+selectedAppearance+'\nBrand / organization: '+brand+'\nTarget date: '+date+'\nCity / venue: '+city+'\nGoal: '+goal+'\n\nPlease send availability, appearance options, and next steps.';
+  bookingEmail.href='mailto:sales@kingkillers.co?subject='+encodeURIComponent('Paid appearance booking - '+selectedAppearance)+'&body='+encodeURIComponent(body);
+}
+document.querySelectorAll('.appearance-option').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.appearance-option').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  selectedAppearance=btn.dataset.appearance;
+  updateBookingEmail();
+}));
+bookingInputs.filter(Boolean).forEach(input=>input.addEventListener('input',updateBookingEmail));
+updateBookingEmail();
 
 /* ---------- fight cycle explorer ---------- */
 const cycleData=[
