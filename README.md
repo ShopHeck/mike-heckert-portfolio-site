@@ -1,6 +1,6 @@
 # Mike Heckert Portfolio Site
 
-Personal portfolio and sponsorship website for professional BKFC fighter Mike "Marvelous" Heckert.
+Personal portfolio and sponsorship website for professional BKFC fighter Mike "King Killer" Heckert.
 
 ## Files
 
