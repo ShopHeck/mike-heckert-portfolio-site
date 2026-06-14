@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="AI-assisted tool stack project visual">
+  <rect width="640" height="480" fill="#0F141F"/>
+  <path d="M86 86h468v308H86z" fill="#151B27" stroke="#303849" stroke-width="2"/>
+  <path d="M118 134h230M118 182h356M118 230h286M118 278h398" stroke="#D6DBE4" stroke-width="12" stroke-linecap="round" opacity=".28"/>
+  <path d="M410 132l56 56-56 56M230 244l-56 56 56 56" fill="none" stroke="#E01023" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="486" cy="308" r="44" fill="#B18A3C"/>
+  <path d="M486 278v60M456 308h60" stroke="#0F141F" stroke-width="12" stroke-linecap="round"/>
+  <text x="118" y="374" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF">AI BUILD BENCH</text>
+  <text x="118" y="406" font-family="Arial, sans-serif" font-size="17" fill="#B9C0CF">storefronts, automations, sponsor systems</text>
+</svg>

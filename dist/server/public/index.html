@@ -186,6 +186,8 @@ h1 em{font-style:normal;color:var(--accent)}
 .plat-handle{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
 .kpi{font-family:var(--mono);font-weight:600;font-size:2rem;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .kpi-label{font-size:.78rem;color:var(--muted)}
+.social-card{display:block;color:inherit;text-decoration:none}
+.social-card .platform-link{pointer-events:none}
 .platform-link{font-family:var(--mono);font-size:.72rem;color:var(--accent-ink);text-decoration:none;display:inline-flex;margin-top:14px}
 .platform-link:hover{text-decoration:underline}
 
@@ -302,7 +304,10 @@ h1 em{font-style:normal;color:var(--accent)}
 .safety-list{list-style:none;display:grid;gap:8px}
 .safety-list li{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;color:#D6DBE4}
 .logo-slots{margin-top:18px;display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
-.logo-slot{min-height:76px;border:1px dashed var(--line);border-radius:6px;background:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;font-family:var(--mono);font-size:.62rem;color:var(--muted);letter-spacing:.07em;text-transform:uppercase}
+.logo-slot{min-height:92px;border:1px dashed var(--line);border-radius:6px;background:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;font-family:var(--mono);font-size:.62rem;color:var(--muted);letter-spacing:.07em;text-transform:uppercase}
+.logo-slot.logo-filled{background:#0F141F;border-style:solid;border-color:#303849;flex-direction:column;gap:8px}
+.logo-slot img{display:block;max-width:100%;max-height:54px;object-fit:contain}
+.logo-slot.logo-filled span{color:#D6DBE4;font-size:.58rem}
 @media(max-width:920px){.suite-grid,.proof-library,.hq-grid,.safety-strip{grid-template-columns:1fr}.planner-output,.suite-strip,.recap-board{grid-template-columns:repeat(2,1fr)}.ladder-grid,.menu-grid,.logo-slots{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.control-line,.boosts,.appearance-options,.booking-fields,.planner-output,.suite-strip{grid-template-columns:1fr}.proof-feature{min-height:260px}}
 @media(max-width:560px){.recap-board,.ladder-grid,.menu-grid,.logo-slots{grid-template-columns:1fr}}
@@ -317,14 +322,16 @@ h1 em{font-style:normal;color:var(--accent)}
 .tag{font-family:var(--mono);font-size:.66rem;border:1px solid var(--line);border-radius:99px;padding:4px 10px;color:var(--muted)}
 
 /* projects */
-.proj{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;padding:26px 0;border-bottom:1px solid var(--line)}
+.proj{display:grid;grid-template-columns:132px minmax(0,1fr) auto;gap:24px;align-items:center;padding:26px 0;border-bottom:1px solid var(--line)}
 .proj:first-of-type{border-top:1.5px solid var(--ink)}
+.proj-media{width:132px;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;background:var(--ink);border:1px solid var(--line)}
+.proj-media img{width:100%;height:100%;object-fit:cover;display:block}
 .proj h3{font-family:var(--display);font-weight:600;font-size:1.2rem;margin-bottom:4px}
 .proj p{color:var(--muted);font-size:.93rem;max-width:560px}
 .chip{font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;padding:6px 12px;border-radius:99px;white-space:nowrap}
 .chip-shipped{background:var(--shipped-bg);color:var(--shipped)}
 .chip-progress{background:var(--progress-bg);color:var(--progress)}
-@media(max-width:600px){.proj{flex-direction:column;gap:10px}.bout{flex-direction:column;gap:8px}}
+@media(max-width:600px){.proj{grid-template-columns:1fr;gap:12px}.proj-media{width:100%;aspect-ratio:16/9}.bout{flex-direction:column;gap:8px}}
 
 /* about */
 .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start}
@@ -651,27 +658,30 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
     <p class="lede">Fight content, striking technique breakdowns, and behind-the-scenes from camp and the brands. Find me everywhere as @michaelheckert — the brand runs as @kingkillersco. Full media kit with engagement data available on request.</p>
 
     <div class="grid platforms-grid">
-      <div class="card reveal">
+      <a class="card reveal social-card" href="https://instagram.com/michaelheckert" target="_blank" rel="noopener">
         <div class="plat-head"><span class="plat-name">Instagram</span><span class="plat-handle">@michaelheckert</span></div>
         <div class="kpi" data-count="27000" data-suffix="+">27K+</div>
         <div class="kpi-label">followers · striking technique &amp; fight content</div>
-      </div>
-      <div class="card reveal">
+        <span class="platform-link">instagram.com/michaelheckert →</span>
+      </a>
+      <a class="card reveal social-card" href="https://tiktok.com/@michaelheckert" target="_blank" rel="noopener">
         <div class="plat-head"><span class="plat-name">TikTok</span><span class="plat-handle">@michaelheckert</span></div>
         <div class="kpi">Media kit</div>
         <div class="kpi-label">available on request · training &amp; fight clips</div>
-      </div>
-      <div class="card reveal">
+        <span class="platform-link">tiktok.com/@michaelheckert →</span>
+      </a>
+      <a class="card reveal social-card" href="https://youtube.com/@michaelheckert" target="_blank" rel="noopener">
         <div class="plat-head"><span class="plat-name">YouTube</span><span class="plat-handle">@michaelheckert</span></div>
         <div class="kpi">Video</div>
         <div class="kpi-label">vlogs, breakdowns &amp; fight content</div>
-        <a class="platform-link" href="https://youtube.com/@michaelheckert" target="_blank" rel="noopener">youtube.com/@michaelheckert →</a>
-      </div>
-      <div class="card reveal">
+        <span class="platform-link">youtube.com/@michaelheckert →</span>
+      </a>
+      <a class="card reveal social-card" href="https://x.com/michaelheckert" target="_blank" rel="noopener">
         <div class="plat-head"><span class="plat-name">X / Twitter</span><span class="plat-handle">@michaelheckert</span></div>
         <div class="kpi">Live</div>
         <div class="kpi-label">fight week commentary &amp; updates</div>
-      </div>
+        <span class="platform-link">x.com/michaelheckert →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -924,13 +934,13 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
 
       <div class="hq-panel reveal" style="margin-top:18px">
         <h3>Sponsor proof wall</h3>
-        <p>When sponsor logos are uploaded, this becomes a visual credibility wall for past and current partners. Until then, the slots show the inventory sponsors can claim.</p>
+        <p>Current and past sponsor proof, with additional placements ready for the next fight cycle.</p>
         <div class="logo-slots" aria-label="Sponsor logo slots">
-          <div class="logo-slot">Fight kit</div>
-          <div class="logo-slot">Walkout shirt</div>
-          <div class="logo-slot">Corner / banner</div>
-          <div class="logo-slot">Social content</div>
-          <div class="logo-slot">Appearance</div>
+          <div class="logo-slot logo-filled"><img src="assets/sponsor-bluefitmd.png" alt="BluefitMD sponsor logo"><span>BluefitMD</span></div>
+          <div class="logo-slot logo-filled"><img src="assets/sponsor-ufc-gym.png" alt="UFC Gym sponsor logo"><span>UFC Gym</span></div>
+          <div class="logo-slot logo-filled"><img src="assets/sponsor-1tom-plumber.png" alt="1-Tom-Plumber sponsor logo"><span>1-Tom-Plumber</span></div>
+          <div class="logo-slot logo-filled"><img src="assets/sponsor-vitality-wellness.png" alt="Vitality Wellness sponsor logo"><span>Vitality Wellness</span></div>
+          <div class="logo-slot">Next fight kit</div>
           <div class="logo-slot">Usage rights</div>
         </div>
       </div>
@@ -1065,6 +1075,7 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
     <p class="lede">The bigger picture — what's done, what's in motion, and what each one proves.</p>
 
     <div class="proj reveal">
+      <figure class="proj-media"><img src="assets/media-king-killers-portrait.jpg" alt="Mike Heckert wearing King Killers apparel"></figure>
       <div>
         <h3>King Killers Apparel</h3>
         <p>Bootstrapped a combat sports apparel brand from zero to a full catalog with 84+ verified customer reviews, a fitness program, and fight-night merch drops.</p>
@@ -1072,6 +1083,7 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
       <span class="chip chip-shipped">● SHIPPED &amp; GROWING</span>
     </div>
     <div class="proj reveal">
+      <figure class="proj-media"><img src="assets/project-ourcoordinates.svg" alt="OurCoordinates brand visual"></figure>
       <div>
         <h3>OurCoordinates</h3>
         <p>Built a personalized jewelry brand around one idea — wear your favorite places — with free engraving and made-in-USA production.</p>
@@ -1079,6 +1091,7 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
       <span class="chip chip-shipped">● SHIPPED &amp; GROWING</span>
     </div>
     <div class="proj reveal">
+      <figure class="proj-media"><img src="assets/media-king-killer-arena.jpg" alt="Mike Heckert fight-night promotional training visual"></figure>
       <div>
         <h3>Full Body Fitness Program</h3>
         <p>Packaged my training and nutrition system into a digital product: 5 workouts, macro calculator, and core program.</p>
@@ -1086,6 +1099,7 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
       <span class="chip chip-shipped">● SHIPPED</span>
     </div>
     <div class="proj reveal">
+      <figure class="proj-media"><img src="assets/fight-clearwater-victory.jpg" alt="Mike Heckert celebrates a BKFC win"></figure>
       <div>
         <h3>BKFC career — the climb to a ranked spot</h3>
         <p>2–1 with 2 KOs and momentum off a hometown win in Clearwater. Next: staying active, building the highlight reel, and fighting my way into title contention.</p>
@@ -1093,6 +1107,7 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
       <span class="chip chip-progress">◐ IN PROGRESS</span>
     </div>
     <div class="proj reveal">
+      <figure class="proj-media"><img src="assets/project-ai-tools.svg" alt="AI-assisted tool stack visual"></figure>
       <div>
         <h3>AI-assisted tool stack</h3>
         <p>Continuing to build ecommerce utilities, sponsor workflows, and creator tools that make the fighting and business sides move faster.</p>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="OurCoordinates project visual">
+  <rect width="640" height="480" fill="#0F141F"/>
+  <path d="M0 360h640v120H0z" fill="#F2F3F0"/>
+  <path d="M74 82h492v316H74z" fill="none" stroke="#D6DBE4" stroke-width="2" opacity=".35"/>
+  <path d="M120 318c86-42 148-28 222-82 50-36 76-85 178-78" fill="none" stroke="#E01023" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="380" cy="207" r="56" fill="#F2F3F0"/>
+  <circle cx="380" cy="207" r="22" fill="#0F141F"/>
+  <path d="M380 117c-52 0-94 42-94 94 0 72 94 154 94 154s94-82 94-154c0-52-42-94-94-94zm0 132a38 38 0 1 1 0-76 38 38 0 0 1 0 76z" fill="#B18A3C"/>
+  <text x="96" y="394" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0F141F">OURCOORDINATES</text>
+  <text x="96" y="426" font-family="Arial, sans-serif" font-size="17" fill="#5B6376">wear the places that matter</text>
+</svg>
