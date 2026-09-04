@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mike "King Killer" Heckert — BKFC Pro Fighter &amp; Founder</title>
-<meta name="description" content="Michael Heckert: professional bare-knuckle fighter (BKFC, 2-1, 2 KOs), founder of King Killers and OurCoordinates, and self-taught builder. St. Petersburg, FL.">
+<meta name="description" content="Michael Heckert: professional bare-knuckle fighter (BKFC, 2-1, 2 KOs), founder of King Killers and OurCoordinates, and self-taught builder. Next fight: vs. Rickie McConnico at BKFC Fight Night Clearwater 4, October 23, 2026. St. Petersburg, FL.">
 <meta name="theme-color" content="#0F141F">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥊</text></svg>">
 <link rel="canonical" href="https://michaelheckert.com">
@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Michael Heckert">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Mike &quot;King Killer&quot; Heckert — BKFC Pro Fighter &amp; Founder">
-<meta property="og:description" content="Pro bare-knuckle fighter (2–1, both wins by KO), founder of King Killers &amp; OurCoordinates, self-taught builder. Open to sponsorships and partnerships.">
+<meta property="og:description" content="Pro bare-knuckle fighter (2–1, both wins by KO), founder of King Killers &amp; OurCoordinates, self-taught builder. Next fight: BKFC Fight Night Clearwater 4, Oct 23 2026 — tickets &amp; sponsorships open.">
 <meta property="og:url" content="https://michaelheckert.com">
 <meta property="og:image" content="https://michaelheckert.com/assets/social-share-king-killer.jpg">
 <meta property="og:image:width" content="1200">
@@ -113,11 +113,16 @@
       "athlete": [
         {
           "@type": "SportsEvent",
-          "name": "BKFC 53"
+          "name": "BKFC Fight Night Clearwater 4",
+          "startDate": "2026-10-23T20:00:00-04:00"
         },
         {
           "@type": "SportsEvent",
           "name": "BKFC Fight Night Clearwater"
+        },
+        {
+          "@type": "SportsEvent",
+          "name": "BKFC 53"
         }
       ],
       "founder": [
@@ -147,6 +152,41 @@
       "description": "Personalized coordinates jewelry & gifts.",
       "founder": {
         "@id": "https://michaelheckert.com/#person"
+      }
+    },
+    {
+      "@type": "SportsEvent",
+      "name": "BKFC Fight Night Clearwater 4",
+      "sport": "Bare-knuckle boxing",
+      "startDate": "2026-10-23T20:00:00-04:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "OCC Road House",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Clearwater",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        }
+      },
+      "competitor": [
+        {
+          "@id": "https://michaelheckert.com/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Rickie McConnico",
+          "alternateName": "Crimson King"
+        }
+      ],
+      "url": "https://www.bkfc.com/events/bkfc-fight-night-clearwater-4",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.bkfc.com/events/bkfc-fight-night-clearwater-4",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "USD"
       }
     },
     {
@@ -228,15 +268,18 @@
   --shipped-bg:#E2F5EC;
   --progress:#855D00;        /* was #9A6B00 = 4.18:1 on --progress-bg; #855D00 clears WCAG AA 4.5 */
   --progress-bg:#FCF1D6;
-  --radius:8px;
+  --radius:12px;
+  --ember:#FF6B2C;           /* ring-fire orange for the next-fight promo */
+  --ember-deep:#C83A12;
   --display:'Bricolage Grotesque',sans-serif;
   --body:'Schibsted Grotesk',sans-serif;
   --mono:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
 body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit}
+::selection{background:var(--accent);color:#fff}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
 section{padding:88px 0}
 h2{font-family:var(--display);font-size:clamp(1.9rem,4vw,2.7rem);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin-bottom:8px}
@@ -297,9 +340,9 @@ h1 em{font-style:normal;color:var(--accent)}
 .btn-row{display:flex;gap:14px;flex-wrap:wrap}
 .btn{font-family:var(--mono);font-size:.85rem;text-decoration:none;padding:14px 24px;border-radius:99px;border:1.5px solid var(--ink);transition:transform .15s ease,background .15s ease}
 .btn:hover{transform:translateY(-2px)}
-.btn-solid{background:var(--ink);color:#fff}
-.btn-solid:hover{background:var(--accent);border-color:var(--accent)}
-.btn-ghost:hover{background:var(--card)}
+.btn-solid{background:var(--ink);color:#fff;box-shadow:0 10px 24px rgba(15,20,31,.22)}
+.btn-solid:hover{background:var(--accent);border-color:var(--accent);box-shadow:0 14px 30px rgba(224,16,35,.32)}
+.btn-ghost:hover{background:var(--card);box-shadow:0 10px 24px rgba(15,20,31,.10)}
 .hero-card{position:relative;isolation:isolate}
 .hero-card::before{content:"";position:absolute;inset:38px -12px -14px 26px;background:var(--accent);z-index:-2;clip-path:polygon(8% 0,100% 7%,92% 100%,0 92%)}
 .hero-card::after{content:"BKFC";position:absolute;right:-18px;top:14px;font-family:var(--display);font-size:clamp(3rem,8vw,6.6rem);font-weight:800;letter-spacing:.08em;color:rgba(15,20,31,.08);writing-mode:vertical-rl;line-height:1;z-index:-1}
@@ -554,6 +597,89 @@ h1 em{font-style:normal;color:var(--accent)}
 .contact-meta a:hover{color:#fff}
 footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
+/* ---------- fight announcement bar ---------- */
+.fight-bar{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.fight-bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 24px;flex-wrap:wrap}
+.fight-bar-info{display:flex;align-items:center;gap:12px;min-width:0;font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;color:#D6DBE4}
+.fight-bar-dot{width:9px;height:9px;border-radius:50%;background:var(--ember);box-shadow:0 0 0 0 rgba(255,107,44,.7);animation:barpulse 2s infinite;flex-shrink:0}
+@keyframes barpulse{0%{box-shadow:0 0 0 0 rgba(255,107,44,.65)}70%{box-shadow:0 0 0 9px rgba(255,107,44,0)}100%{box-shadow:0 0 0 0 rgba(255,107,44,0)}}
+.fight-bar-info b{color:#fff;font-weight:600;letter-spacing:.06em}
+.fight-bar-info .sep{color:#3A4252}
+.fight-bar-cta{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,var(--accent),var(--ember-deep));text-decoration:none;padding:8px 15px;border-radius:99px;white-space:nowrap;transition:transform .15s ease,box-shadow .15s ease}
+.fight-bar-cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(224,16,35,.4)}
+@media(max-width:640px){.fight-bar .wrap{gap:8px;padding:8px 20px}.fight-bar-info{font-size:.66rem}}
+
+/* ---------- next fight promo ---------- */
+.next-fight{background:#0B0E16;color:#fff;position:relative;overflow:hidden;padding:96px 0}
+.next-fight::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(680px 460px at 82% 22%,rgba(255,107,44,.20),transparent 60%),
+  radial-gradient(520px 420px at 6% 92%,rgba(224,16,35,.16),transparent 60%);pointer-events:none}
+.next-fight::after{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px);background-size:40px 40px;mask-image:radial-gradient(circle at 70% 30%,black,transparent 82%);pointer-events:none}
+.next-fight .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.nf-tag{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ember);margin-bottom:20px}
+.nf-tag::before{content:"";width:26px;height:2px;background:linear-gradient(90deg,var(--accent),var(--ember))}
+.nf-live{width:8px;height:8px;border-radius:50%;background:var(--ember);animation:barpulse 2s infinite}
+.next-fight h2{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,5.4vw,4rem);line-height:.98;letter-spacing:-.03em;margin-bottom:8px}
+.nf-opp{display:block;font-size:clamp(1.15rem,2.6vw,1.7rem);color:#B9C0CF;font-weight:600;letter-spacing:-.01em;margin-top:14px}
+.nf-opp b{color:#fff;font-weight:800}
+.nf-lede{color:#B9C0CF;max-width:480px;margin:20px 0 28px;font-size:1.02rem}
+.nf-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:30px;max-width:520px}
+.nf-meta div{background:rgba(255,255,255,.03);border:1px solid #263044;border-radius:10px;padding:14px 14px 12px}
+.nf-meta .ic{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ember);display:block;margin-bottom:6px}
+.nf-meta b{display:block;font-family:var(--display);font-size:1.02rem;line-height:1.15;color:#fff}
+.nf-meta span{font-size:.74rem;color:#8D96A8}
+.nf-count{margin-bottom:30px}
+.nf-count-label{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#8D96A8;margin-bottom:12px;display:flex;align-items:center;gap:9px}
+.nf-count-label::before{content:"";width:18px;height:2px;background:var(--ember)}
+.nf-clock{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:440px}
+.nf-unit{background:#0F141F;border:1px solid #263044;border-radius:10px;padding:16px 8px 12px;text-align:center}
+.nf-unit b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(1.7rem,4vw,2.4rem);line-height:1;font-variant-numeric:tabular-nums;color:#fff}
+.nf-unit span{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:#8D96A8;margin-top:7px;display:block}
+.nf-clock .nf-state{grid-column:1/-1;background:linear-gradient(135deg,rgba(224,16,35,.18),rgba(255,107,44,.14));border-color:var(--accent);padding:18px;font-family:var(--display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;color:#fff}
+.nf-btns{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.nf-btn{font-family:var(--mono);font-size:.84rem;text-decoration:none;padding:15px 26px;border-radius:99px;display:inline-flex;align-items:center;gap:9px;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;border:1.5px solid transparent}
+.nf-btn:hover{transform:translateY(-2px)}
+.nf-btn-primary{background:linear-gradient(135deg,var(--accent),var(--ember-deep));color:#fff;box-shadow:0 14px 34px rgba(224,16,35,.34)}
+.nf-btn-primary:hover{box-shadow:0 18px 40px rgba(224,16,35,.46)}
+.nf-btn-ghost{border-color:#3A4252;color:#fff;background:transparent}
+.nf-btn-ghost:hover{border-color:#B9C0CF;background:rgba(255,255,255,.05)}
+.nf-note{margin-top:18px;font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;color:#7D8699}
+.nf-poster{position:relative}
+.nf-poster-frame{position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:#0B0E16;box-shadow:0 40px 90px rgba(0,0,0,.6),0 0 0 1px rgba(255,107,44,.12)}
+.nf-poster-frame::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 0%,rgba(255,107,44,.16),transparent 55%);pointer-events:none;z-index:1}
+.nf-poster-frame img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;display:block;transition:transform .5s ease}
+.nf-poster:hover .nf-poster-frame img{transform:scale(1.03)}
+.nf-poster-tag{position:absolute;top:16px;left:16px;z-index:2;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(11,14,22,.72);border:1px solid rgba(255,255,255,.22);padding:8px 13px;border-radius:99px;backdrop-filter:blur(8px)}
+.nf-poster-date{position:absolute;right:16px;bottom:16px;z-index:2;text-align:right;font-family:var(--display);font-weight:800;color:#fff;line-height:.95;text-shadow:0 3px 18px rgba(0,0,0,.7)}
+.nf-poster-date b{display:block;font-size:2rem;letter-spacing:-.02em}
+.nf-poster-date span{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ember)}
+@media(max-width:920px){
+  .next-fight{padding:72px 0}
+  .next-fight .wrap{grid-template-columns:1fr;gap:44px}
+  .nf-poster{order:-1;max-width:460px;margin:0 auto;width:100%}
+}
+@media(max-width:560px){
+  .nf-meta{grid-template-columns:1fr}
+  .nf-clock{gap:8px}
+  .nf-unit{padding:12px 4px 10px}
+  .nf-btn{width:100%;justify-content:center}
+}
+
+/* ---------- upcoming bout (fight record) ---------- */
+.bout-next{background:linear-gradient(135deg,rgba(224,16,35,.06),rgba(255,107,44,.05));border:1.5px solid var(--accent);border-radius:var(--radius);padding:24px 22px;margin-bottom:14px;align-items:center}
+.bout-next .bout-body{flex:1}
+.result-next{background:var(--ink);color:#fff;border-radius:8px;font-family:var(--mono);font-weight:600;font-size:.72rem;width:78px;flex-shrink:0;padding:8px 0;text-align:center;letter-spacing:.08em;display:flex;flex-direction:column;gap:2px;align-items:center;justify-content:center}
+.result-next .rd{width:7px;height:7px;border-radius:50%;background:var(--ember);animation:barpulse 2s infinite}
+.bout-next h3{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.bout-next .mini-chip{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);color:#fff;padding:3px 9px;border-radius:99px}
+.bout-next p{color:var(--muted);font-size:.9rem}
+.bout-next a{font-family:var(--mono);font-size:.74rem;color:var(--accent-ink);text-decoration:none;white-space:nowrap;font-weight:600}
+.bout-next a:hover{text-decoration:underline}
+
+/* stat card polish */
+.stat-card{transition:transform .18s ease,box-shadow .18s ease}
+.stat-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(15,20,31,.10)}
+
 /* reveal */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease;transition-delay:var(--d,0s)}
 .reveal.in{opacity:1;transform:none}
@@ -650,14 +776,24 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
 .intent:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 #partner .card,#partner .cycle,#partner .faq details{background:var(--paper)}
 
+/* rising embers in the next-fight promo */
+.nf-ember{position:absolute;bottom:-12px;border-radius:50%;background:radial-gradient(circle,#FFB27A 0%,var(--ember) 45%,transparent 72%);pointer-events:none;z-index:0;opacity:0;animation:ember-rise linear infinite}
+@keyframes ember-rise{
+  0%{transform:translateY(0) translateX(0);opacity:0}
+  12%{opacity:.85}
+  60%{opacity:.5}
+  100%{transform:translateY(-46vh) translateX(var(--drift,24px));opacity:0}
+}
+
 @media(prefers-reduced-motion:reduce){
   .ticker-track{animation:none}
   .reveal,.stagger{opacity:1;transform:none;transition:none;animation:none}
-  .dot{animation:none}
+  .dot,.fight-bar-dot,.nf-live,.result-next .rd{animation:none}
   html{scroll-behavior:auto}
   .hero::after,.card::after{display:none}
   .rot-word{transition:none}
-  .impact,.confetti-bit{display:none}
+  .impact,.confetti-bit,.nf-ember{display:none}
+  .nf-poster-frame img{transition:none}
 }
 </style>
 </head>
@@ -669,10 +805,21 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
 
 <a class="skip-link" href="#main">Skip to content</a>
 
+<div class="fight-bar">
+  <div class="wrap">
+    <div class="fight-bar-info">
+      <span class="fight-bar-dot" aria-hidden="true"></span>
+      <span><b>NEXT FIGHT</b> HECKERT vs McCONNICO <span class="sep">·</span> BKFC CLEARWATER 4 <span class="sep">·</span> OCT 23 <span class="sep">·</span> OCC ROAD HOUSE</span>
+    </div>
+    <a class="fight-bar-cta" href="https://www.bkfc.com/events/bkfc-fight-night-clearwater-4" target="_blank" rel="noopener" data-track="outbound-tickets" data-source="fight-bar">Get tickets →</a>
+  </div>
+</div>
+
 <nav>
   <div class="wrap nav-inner">
     <a class="logo" href="#top" id="logo">michael<span>.</span>heckert</a>
     <ul class="nav-links" id="navLinks">
+      <li><a href="#next-fight">Next Fight</a></li>
       <li><a href="#fights">Fight Record</a></li>
       <li><a href="#brands">Brands</a></li>
       <li><a href="#socials">Socials</a></li>
@@ -721,21 +868,67 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
 <!-- Signature: stat ticker (all verified) -->
 <div class="ticker" role="group" aria-label="Headline stats">
   <div class="ticker-track">
+    <span class="tick">NEXT FIGHT <b>HECKERT vs McCONNICO · OCT 23</b></span>
     <span class="tick">BKFC PRO RECORD <b>2–1</b></span>
     <span class="tick">WINS BY KNOCKOUT <b>2</b></span>
     <span class="tick">BRANDS FOUNDED &amp; OPERATED <b>2</b></span>
     <span class="tick">KING KILLERS VERIFIED REVIEWS <b>84+</b></span>
     <span class="tick">PUBLIC GITHUB REPOS <b>40</b></span>
-    <span class="tick">LATEST W <b>BKFC FIGHT NIGHT CLEARWATER</b></span>
+    <span class="tick">LATEST W <b>RD 1 KO · CLEARWATER</b></span>
     <!-- duplicate for seamless loop -->
+    <span class="tick">NEXT FIGHT <b>HECKERT vs McCONNICO · OCT 23</b></span>
     <span class="tick">BKFC PRO RECORD <b>2–1</b></span>
     <span class="tick">WINS BY KNOCKOUT <b>2</b></span>
     <span class="tick">BRANDS FOUNDED &amp; OPERATED <b>2</b></span>
     <span class="tick">KING KILLERS VERIFIED REVIEWS <b>84+</b></span>
     <span class="tick">PUBLIC GITHUB REPOS <b>40</b></span>
-    <span class="tick">LATEST W <b>BKFC FIGHT NIGHT CLEARWATER</b></span>
+    <span class="tick">LATEST W <b>RD 1 KO · CLEARWATER</b></span>
   </div>
 </div>
+
+<!-- Signature: next-fight promo (event key art + countdown) -->
+<section class="next-fight" id="next-fight" aria-label="Upcoming fight: BKFC Fight Night Clearwater 4">
+  <div class="wrap">
+    <div class="nf-copy">
+      <span class="nf-tag reveal"><span class="nf-live" aria-hidden="true"></span> Next bout · live on BKFC</span>
+      <h2 class="reveal">BKFC Fight Night<br>Clearwater 4</h2>
+      <span class="nf-opp reveal">Mike “King Killer” Heckert <b>vs. Rickie “Crimson King” McConnico</b></span>
+      <p class="nf-lede reveal">A welterweight showdown in the Square Ring, back in front of the hometown Tampa Bay crowd. Heckert rides a first-round KO and is hunting his third straight stoppage.</p>
+
+      <div class="nf-meta reveal">
+        <div><span class="ic">When</span><b>Friday, Oct 23</b><span>2026 · 8:00 PM ET</span></div>
+        <div><span class="ic">Where</span><b>OCC Road House</b><span>St. Pete–Clearwater, FL</span></div>
+        <div><span class="ic">Bout</span><b>Welterweight</b><span>165 lb · 5 × 2 min</span></div>
+      </div>
+
+      <div class="nf-count reveal">
+        <div class="nf-count-label">Countdown to walkout</div>
+        <div class="nf-clock" id="nfClock" role="timer" aria-label="Countdown to fight night October 23 2026">
+          <div class="nf-unit"><b id="cfD">—</b><span>Days</span></div>
+          <div class="nf-unit"><b id="cfH">—</b><span>Hours</span></div>
+          <div class="nf-unit"><b id="cfM">—</b><span>Min</span></div>
+          <div class="nf-unit"><b id="cfS">—</b><span>Sec</span></div>
+        </div>
+      </div>
+
+      <div class="nf-btns reveal">
+        <a class="nf-btn nf-btn-primary" href="https://www.bkfc.com/events/bkfc-fight-night-clearwater-4" target="_blank" rel="noopener" data-track="outbound-tickets" data-source="next-fight">Get tickets →</a>
+        <a class="nf-btn nf-btn-ghost" href="mailto:sales@kingkillers.co?subject=BKFC%20Clearwater%204%20sponsorship&body=Hi%20Mike%2C%0A%0AWe%27d%20like%20to%20talk%20about%20sponsoring%20your%20fight%20at%20BKFC%20Fight%20Night%20Clearwater%204%20on%20October%2023.%0A%0ABrand%3A%0AWebsite%3A%0APackage%20we%27re%20interested%20in%20(Title%20%2F%20Fight%20Kit%20%2F%20Content)%3A" data-track="mailto-open" data-source="next-fight">Sponsor this fight</a>
+      </div>
+      <p class="nf-note reveal">Fight card subject to change · tickets via the official BKFC event page</p>
+    </div>
+
+    <figure class="nf-poster reveal" aria-label="Official BKFC Fight Night Clearwater 4 event poster: Heckert vs McConnico">
+      <span class="nf-poster-tag">Official bout poster</span>
+      <div class="nf-poster-frame">
+        <!-- The official Heckert vs McConnico poster. If assets/media-bkfc-clearwater4-poster.png
+             is present it loads directly; otherwise we fall back to the composite fight-night key art.
+             Run `npm run images` after adding the PNG to also serve AVIF/WebP variants. -->
+        <img src="assets/media-bkfc-clearwater4-poster.png" width="1365" height="1653" loading="lazy" decoding="async" alt="Official BKFC Fight Night Clearwater 4 poster: Mike Heckert vs Rickie McConnico, welterweight bout, October 23" onerror="this.onerror=null;this.src='assets/media-fight-night-key-art.jpg';">
+      </div>
+    </figure>
+  </div>
+</section>
 
 <section id="fights">
   <div class="wrap">
@@ -750,11 +943,19 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
       <div class="stat-card reveal"><div class="kpi">6'0"</div><div class="kpi-label">Height / reach advantage</div></div>
     </div>
 
+    <div class="bout bout-next reveal">
+      <span class="result result-next"><span class="rd" aria-hidden="true"></span>NEXT</span>
+      <div class="bout-body">
+        <h3>vs. Rickie “Crimson King” McConnico — BKFC Fight Night Clearwater 4 <span class="mini-chip">Scheduled · Welterweight</span></h3>
+        <p>OCC Road House, St. Pete–Clearwater, FL · Friday, October 23, 2026. Hometown return to the Square Ring against Rickie “Crimson King” McConnico.</p>
+      </div>
+      <a href="https://www.bkfc.com/events/bkfc-fight-night-clearwater-4" target="_blank" rel="noopener" data-track="outbound-tickets" data-source="fight-record">Tickets →</a>
+    </div>
     <div class="bout reveal">
       <span class="result result-w">W · KO</span>
       <div>
         <h3>vs. Justin Walters — BKFC Fight Night Clearwater</h3>
-        <p>OCC Roadhouse, Clearwater, FL · April 2026. First-round KO in front of the hometown Tampa Bay crowd.</p>
+        <p>OCC Roadhouse, Clearwater, FL · April 2026. First-round KO (1:18 of round one) in front of the hometown Tampa Bay crowd.</p>
       </div>
     </div>
     <div class="bout reveal">
@@ -1414,6 +1615,7 @@ footer{padding:26px 0 40px;font-family:var(--mono);font-size:.72rem;color:var(--
         <div class="tl-item"><span class="tl-year">FOUNDER</span><b>Launched OurCoordinates &amp; King Killers</b><span>Two Shopify brands, built and operated solo.</span></div>
         <div class="tl-item"><span class="tl-year">NOV 2023</span><b>BKFC pro debut — W by KO</b><span>Beat Scott Lampert at BKFC 53 in Orlando.</span></div>
         <div class="tl-item"><span class="tl-year">APR 2026</span><b>Hometown W by KO</b><span>Beat Justin Walters at BKFC Fight Night Clearwater.</span></div>
+        <div class="tl-item"><span class="tl-year">OCT 2026</span><b>BKFC Fight Night Clearwater 4</b><span>Oct 23 at the OCC Road House — welterweight bout vs. Rickie “Crimson King” McConnico.</span></div>
         <div class="tl-item"><span class="tl-year">NOW</span><b>2–1, building, shipping</b><span>Chasing the next fight, the next launch, the next repo.</span></div>
       </div>
     </div>
@@ -1582,7 +1784,7 @@ if(finePointer&&!reduced){
 /* ---------- scroll progress + round tracker ---------- */
 const progress=document.getElementById('progress');
 const badge=document.getElementById('roundBadge');
-const rounds={fights:['RD 01','THE FIGHTER'],brands:['RD 02','THE BRANDS'],socials:['RD 03','THE AUDIENCE'],'deal-room':['RD 04','BRAND DEAL ROOM'],'sponsor-suite':['RD 05','SPONSOR TOOLS'],partner:['RD 06','PARTNER WITH ME'],code:['RD 07','THE BUILDER'],projects:['RD 08','PROJECTS'],about:['RD 09','ABOUT'],contact:['RD 10','LET\'S TALK']};
+const rounds={'next-fight':['RD 00','NEXT FIGHT'],fights:['RD 01','THE FIGHTER'],brands:['RD 02','THE BRANDS'],socials:['RD 03','THE AUDIENCE'],'deal-room':['RD 04','BRAND DEAL ROOM'],'sponsor-suite':['RD 05','SPONSOR TOOLS'],partner:['RD 06','PARTNER WITH ME'],code:['RD 07','THE BUILDER'],projects:['RD 08','PROJECTS'],about:['RD 09','ABOUT'],contact:['RD 10','LET\'S TALK']};
 const sections=Object.keys(rounds).map(id=>document.getElementById(id)).filter(Boolean);
 let ticking=false;
 window.addEventListener('scroll',()=>{
@@ -1758,6 +1960,48 @@ document.querySelectorAll('.intent').forEach(btn=>btn.addEventListener('click',(
   const d=intentData[btn.dataset.intent];
   emailBtn.href='mailto:'+MAIL+'?subject='+encodeURIComponent(d.s)+'&body='+encodeURIComponent(d.b);
 }));
+
+/* ---------- next-fight countdown (BKFC Clearwater 4 · Oct 23 2026, 8PM ET) ---------- */
+(()=>{
+  const clock=document.getElementById('nfClock');
+  if(!clock)return;
+  const elD=document.getElementById('cfD'),elH=document.getElementById('cfH'),elM=document.getElementById('cfM'),elS=document.getElementById('cfS');
+  /* 2026-10-23 20:00 America/New_York = 2026-10-24 00:00 UTC (EDT, UTC-4) */
+  const FIGHT_MS=Date.UTC(2026,9,24,0,0,0);
+  const pad=n=>String(n).padStart(2,'0');
+  function state(label){
+    clock.innerHTML='<div class="nf-state">'+label+'</div>';
+  }
+  function tick(){
+    let ms=FIGHT_MS-Date.now();
+    if(ms<=0){state("IT'S FIGHT NIGHT — LIVE ON BKFC");clearInterval(timer);return;}
+    const s=Math.floor(ms/1000);
+    elD.textContent=Math.floor(s/86400);
+    elH.textContent=pad(Math.floor(s/3600)%24);
+    elM.textContent=pad(Math.floor(s/60)%60);
+    elS.textContent=pad(s%60);
+    if(s<7*86400){const lbl=clock.querySelector('.nf-countdown-live');if(!lbl){const l=document.createElement('div');l.className='nf-countdown-live';l.style.cssText='grid-column:1/-1;text-align:center;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ember);margin-top:10px';l.textContent='FIGHT WEEK — SEE YOU IN CLEARWATER';clock.appendChild(l);}}
+  }
+  const timer=setInterval(tick,1000);tick();
+})();
+
+/* ---------- rising embers in the next-fight promo ---------- */
+(()=>{
+  const sec=document.querySelector('.next-fight');
+  if(!sec||reduced)return;
+  const N=14;
+  for(let i=0;i<N;i++){
+    const e=document.createElement('span');
+    e.className='nf-ember';
+    const size=3+Math.random()*6;
+    e.style.width=size+'px';e.style.height=size+'px';
+    e.style.left=(Math.random()*100)+'%';
+    e.style.setProperty('--drift',(Math.random()*90-45)+'px');
+    e.style.animationDuration=(7+Math.random()*8)+'s';
+    e.style.animationDelay=(-Math.random()*12)+'s';
+    sec.appendChild(e);
+  }
+})();
 })();
 </script>
 </body>
