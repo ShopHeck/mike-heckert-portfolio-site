@@ -12,6 +12,7 @@ fight-clearwater-punch.jpg|480 720 1000 1400
 fight-clearwater-raised-hand.jpg|480 720 1000 1400
 fight-clearwater-victory.jpg|480 720 1000 1400
 fight-clearwater-walkout.jpg|480 720 1000 1400
+media-bkfc-clearwater4-poster.png|480 720 1000 1400
 media-cfn-walkout.jpg|480 720 1000 1400
 media-fight-night-key-art.jpg|480 720 1000 1400
 media-king-killer-arena.jpg|480 720 1000 1400
