@@ -52,7 +52,7 @@ branch. Measured result: **3.94 MB → 0.83 MB desktop (−79%)** / **0.70 MB mo
 | 8 | `--progress` contrast | ✅ `#855D00` = **5.25:1** (was 4.18) |
 | 9 | Merge §§4–6 sponsorship sections | ⬜ **not done** — editorial call, needs sign-off |
 | 10 | CTA label/destination mismatch | ✅ now downloads the PDF |
-| 11 | Analytics + CTA events | ✅ 18 `data-track` CTAs; set `ANALYTICS.provider` to go live |
+| 11 | Analytics + CTA events | ✅ 19 `data-track` CTAs (all verified as real DOM attributes); set `ANALYTICS.provider` to go live |
 | 12 | `robots.txt` + `sitemap.xml` | ✅ added and in the build script |
 | 13 | `FAQPage` JSON-LD | ✅ all 5 FAQs, text extracted from the page |
 | 14 | Shorten title | ✅ **55 chars** (was 67) |
@@ -66,9 +66,16 @@ branch. Measured result: **3.94 MB → 0.83 MB desktop (−79%)** / **0.70 MB mo
 | 22 | A/B test price anchoring | ⬜ blocked on #11 going live |
 
 **Verification run:** `npm run build` succeeds; a local server returned **HTTP 200 for
-all 93 referenced local URLs** (including every `srcset` candidate); the HTML parses
+all 91 referenced local URLs** (including every `srcset` candidate); the HTML parses
 with no unclosed or mismatched tags and no duplicate `id`s; the inline script passes
 `node --check`; all 3 JSON-LD blocks parse.
+
+The Cloudflare Pages preview was also checked live, which caught a bug the local
+checks missed: two `data-track` injections had landed inside the anchor's *text
+content* rather than the tag, rendering `data-track="mailto-open" data-source=...>`
+as visible copy on the Deal Room and Sponsor HQ CTAs. Both are repaired, and all 19
+are now verified by parsing the DOM for real attributes rather than counting
+substring occurrences.
 
 ---
 
